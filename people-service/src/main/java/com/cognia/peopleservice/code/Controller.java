@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RefreshScope
-@RestController("/service")
+@RestController()
 public class Controller {
 
     @Autowired
     private Person person;
 
-    @GetMapping()
+    @GetMapping(("/service"))
     public Person person(){
         return person;
     }
